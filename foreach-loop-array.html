@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Template Literals</h2>
+
+<p>Template literals allows variables in strings:</p>
+
+<p id="rokun_id"></p>
+
+<p>Template literals are not supported in Internet Explorer.</p>
+
+<script>
+var header = "Welcome To our site!";
+var list_cars = ["Toyota", "Corolla", "BMW", "TBS", "Pulser"];
+
+var html ='<h2>' + header + '</h2><ul class="start_list">';
+
+for(const x of list_cars){
+    html += '<li>' + x + '</li>';
+}
+
+html += '</ul>';
+
+document.getElementById("rokun_id").innerHTML = html;
+</script>
+
+</body>
+</html>
