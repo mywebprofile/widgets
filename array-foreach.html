@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <link rel="stylesheet" href="style.css" />
 <body>
 
 <h2>JavaScript Arrays</h2>
@@ -20,7 +21,19 @@ function myFunction(value) {
   text += "<li>" + value + "</li>";
 } 
 </script>
+<div class="MyScript">
+  const fruits = ["Banana", "Orange", "Apple", "Mango"];<br><br>
 
+  let text = "< ul ></ ul >"; <br>
+  fruits.forEach(myFunction);<br>
+  text += "</ ul >";<br>
+  document.getElementById("demo").innerHTML = text;<br><br>
+  
+  function myFunction(value) {<br>
+    text += "< li > " + value + " < / li >";<br>
+  } 
+
+</div>
 <h1>Stat Second Script forEach()</h1>
 <h1>array-value.forEach(function-name)</h1>
 <h1>array-value.forEach(function(value){
@@ -28,7 +41,17 @@ function myFunction(value) {
 });</h1>
 <h2>JavaScript Sets</h2>
 <p>forEach() calls a function for each element:</p>
-
+<div class="MyScript">
+  // Create a Set <br>
+  const letters = new Set(["a","b","c"]);<br><br>
+  
+  // List all Elements <br>
+  let text = "";<br>
+  letters.forEach (function(value) {<br>
+    text += value;<br>
+  })<br>
+  </div>
+</div>
 <p id="demo_rok"></p>
 
 <script>
