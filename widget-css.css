@@ -1,0 +1,41 @@
+#lhc_status_container #status-icon {
+    background-size: contain;
+    background-color: #fff !important;
+    /*border: 3px solid #3f4040 !important;*/
+}
+#lhc_status_container #status-icon:before{
+    content:'Keno TUmi';
+    position: absolute;
+    bottom: 1px;
+    left: 44px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 5px 0 5px;
+    border-color: #fff transparent transparent transparent;
+    transform: rotate(0deg);
+}
+/* #lhc_status_container #status-icon:before{
+    content:'Keno TUmi';
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 5px 0 5px;
+    border-color: #fff transparent transparent transparent;
+    transform: rotate(-40deg);
+} */
+/*lhc_status_container #status-icon:after{
+        content:'';
+    position: absolute;
+    bottom: 14px;
+    right: 19px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 5px 0 5px;
+    border-color: #fff transparent transparent transparent;
+    transform: rotate(-40deg);
+}*/
