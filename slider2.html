@@ -1,0 +1,235 @@
+<html>
+<head>
+<title>Slider</title>
+<style>
+    body, ul {
+        margin: 0;
+        padding: 0;
+    }
+    .slider-nav {
+  position: absolute;
+  top: 20px !important;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999 !important;
+}
+
+.prev-slide,
+.next-slide {
+  color: red !important;
+}
+.slide-caption{
+    color: red !important;
+}
+
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.slider ul {
+  position: relative;
+  width: 300%;
+  height: 100%;
+  left: 0;
+  transition: left 0.5s ease-in-out;
+}
+
+.slider li {
+  position: relative;
+  width: 33.33%;
+  height: 100%;
+  float: left;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide-caption h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.slide-caption p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.slider-nav {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+.prev-slide,
+.next-slide {
+  background-color: transparent;
+  border: none;
+  color: red;
+  font-size: 30px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.prev-slide:hover,
+.next-slide:hover {
+  color: #ccc;
+}
+
+
+/* slider Caption */
+
+.slide-caption h2 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(-50%);
+  animation-name: slideInFromLeft;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.slide-caption p {
+  font-size: 20px;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(50%);
+  animation-name: slideInFromRight;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%) translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateY(50%) translateX(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(50%) translateX(0);
+  }
+}
+
+
+.slider img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    max-width: 100%;
+}
+</style>
+</head>
+<body>
+
+    
+    <div id="slider1" class="slider">
+        <ul>
+          <li>
+            <img src="https://layerslider.com/wp-content/uploads/layerslider/Mode-Slider/women-2.png" alt="Slide 1">
+            <div class="slide-caption">
+              <h2>Find Your Favorite Outfit</h2>
+              <p>Slide 1 Description</p>
+            </div>
+          </li>
+          <li>
+            <img src="https://layerslider.com/wp-content/uploads/layerslider/Mode-Slider/women.png" alt="Slide 2">
+            <div class="slide-caption">
+              <h2>Slide 2 Title</h2>
+              <p>Slide 2 Description</p>
+            </div>
+          </li>
+          <li>
+            <img src="slide3.jpg" alt="Slide 3">
+            <div class="slide-caption">
+              <h2>Slide 3 Title</h2>
+              <p>Slide 3 Description</p>
+            </div>
+          </li>
+        </ul>
+        <div class="slider-nav">
+          <button class="prev-slide">&lt;</button>
+          <button class="next-slide">&gt;</button>
+        </div>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+  var slideIndex = 0;
+  var slideWidth = $('.slider').width();
+  var slides = $('.slider li');
+  var slideCount = slides.length;
+
+  // Set initial slide to active
+  slides.eq(slideIndex).addClass('active');
+
+  // Move slides left or right
+  function moveSlides(direction) {
+    if (direction === 'left') {
+      slideIndex--;
+      if (slideIndex < 0) {
+        slideIndex = slideCount - 1;
+      }
+    } else {
+      slideIndex++;
+      if (slideIndex >= slideCount) {
+        slideIndex = 0;
+      }
+    }
+    $('.slider ul').css('left', -slideIndex * slideWidth);
+    slides.removeClass('active');
+    slides.eq(slideIndex).addClass('active');
+  }
+
+  // Move to previous slide on click
+  $('.prev-slide').click(function() {
+    moveSlides('left');
+  });
+
+  // Move to next slide on click
+  $('.next-slide').click(function() {
+    moveSlides('right');
+  });
+
+  // Animate slide captions
+  $('.active .slide-caption').css('opacity', 1);
+});
+</script>
+</body>
+</html>
