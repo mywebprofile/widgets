@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+    <title>Chat2 setup [URL]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="intro/fonts/fonts.css" />
+    <link rel="stylesheet" href="intro/css/style.css" />
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $('.diy').click(function() {
+                $('.body_diy').addClass('active');
+                $('.TopP').addClass('hide');
+                $('.job_body').addClass('hide');
+                $('.job_body').removeClass('active');
+                $('.detail_body').addClass('hide');
+                $('.detail_body').removeClass('active');
+                $('.job').addClass('active');
+                $('.job').removeClass('hide');
+                $('.detail').addClass('active');
+                $('.detail').removeClass('hide');
+                $('.only_all').addClass('active');
+                $('#send-form-install').show();
+                $(this).addClass('hide');
+                $('.notmyjob-text').show();
+            });
+            $('.job').click(function() {
+                $('.job_body').addClass('active');
+                $('.diy').addClass('active');
+                $('.diy').removeClass('hide');
+                $('.body_diy ').addClass('hide');
+                $('.body_diy ').removeClass('active')
+                $('.detail_body').addClass('hide');
+                $('.detail_body').removeClass('active');
+                $('.TopP').addClass('hide');
+                $('.detail').addClass('active');
+                $('.only_all').addClass('active');
+                $('.detail').removeClass('hide');
+                $('#send-form-install').show();
+                $('#send-form').show();
+
+                $(this).addClass('hide');
+
+            });
+            $('.detail').click(function() {
+                $('.body_diy').addClass('hide');
+                $('.body_diy').removeClass('active');
+                $('.job_body').addClass('hide');
+                $('.job_body').removeClass('active');
+                $('#send-form-install').show();
+
+                $('.job').addClass('active');
+                $('.job').removeClass('hide');
+                $('.only_all').addClass('active');
+
+                $('.TopP').addClass('hide');
+                $('.detail_body').addClass('active');
+                $('.detail_body').removeClass('hide');
+                $('.diy').removeClass('hide');
+                $(this).addClass('hide');
+                $('.notmyjob-text').show();
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+
+    <script type="text/javascript" src="intro/jquery-1.js"></script>
+    <script type="text/javascript" src="intro/velocity.js" id="library"></script>
+<header id="header_wrapper"> 
+        <div id="header" class=" scrolla">
+            <div class="row">
+                      <a href="http://chat2.com/" id="logo"><img src="/templates/chat2/img/logo.png" alt="Chat2"></a>
+<div class="HeaderRight">
+                    <ul id="nav" class="">
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163"><a href="/blog2/">Blog</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163"><a href="http://chat2.com/concierge/">Concierge</a></li>
+                    </ul>  
+
+
+<ul class="social-icon">
+<li class="social facebook"><a target="_blank" class="su-button su-button-style-default hh" href="https://www.facebook.com/wwwchat2com/"></a></li>
+    <li class="social twitter"><a target="_blank" class="su-button su-button-style-default hh" href="https://twitter.com/wwwchat2com"></a></li>
+    <li class="social linked"><a target="_blank" class="su-button su-button-style-default hh" href="https://www.linkedin.com/pulse/chat2-so-easy-install-karen-lloyd-collins"></a></li>
+</ul>
+                    
+                    <ul class="playstore">
+                        <li><a href="https://itunes.apple.com/us/app/chat2-com/id1239200915?mt=8"><img src="templates/chat2/images/apple.png" alt="Google Play"></a></li>                        <li><a href="https://wordpress.org/plugins/chat2/"><img src="templates/chat2/images/wp.png" alt="WordPress PLugin"></a></li>                        <li><img src="templates/chat2/images/googlePlayIcon.png" alt="Google Play"></li>
+                    </ul>
+</div> 
+                    
+                         
+                   
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+    
+    
+<div id="content-d">
+     <h3 class="Cong">Congratulations on joining Chat2! </h3>                                 
+                                                    
+    <div class="detail_body">
+       
+        <h1 class="option-title detail-tit">Do It For Me</h1>
+    
+        <div id="send-form-install">
+            We'll get that done for you, please supply your website login address, login name and password and any other details we might need. You can also note down anyone we should contact.
+    
+            <div class="MM">
+                <textarea name="loginname" id="loginname" cols="70" rows="5"></textarea>
+                <div class="mb10">
+                    <span id="button-send_s">Send</span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="send-success-installation" style="display: hide;">Ok, we have passed your information to the installers, you will receive a notification when its complete.</div>
+        
+    </div>
+    <div class="job_body">
+    
+        <h1 class="option-title job-tit">Not My Job</h1>
+        <div class="notmyjob-text">
+        We will email your technical person for you. Please input their email below.
+        </div>
+        <div id="send-form">
+            <div class="mb10">
+                    <label>Email: </label>
+            <input id="send-to-email" type="email" value=""/>
+            </div>
+            <div class="mb10">
+                <label>Installation url: </label>
+                <input id="url-to-install" type="text" maxlength="64" value="[YOUR_URL_HERE]"/>
+            </div>
+            <div class="mb10 sendb">
+            <span id="button-send">Send</span>
+          
+            </div>
+        </div>
+
+        <div id="send-success">Ok, we've emailed the instructions.</div>
+
+    </div>
+    
+    <div class="TopP">
+        <div class="CongText">
+            Now let's get chat2 installed on  <br>
+            [YOUR_URL_HERE]
+            
+            
+            to boost your sales and customer service<br>
+        </div>
+    </div>
+    
+    
+    <div class="body_diy">
+        <h1 class="option-title diy-tit">Do It Yourself</h1>
+        <div class="mb10">
+            Copy this code and put it before the closing &lt/body&gt tag in either <br>the footer file or on each page you want chat to appear.
+        </div>
+        <textarea style="width:500px" class="mb10__" onMouseUp="var inp=this;setTimeout(function(){inp.select();},10);" cols="55" rows="7"><script>var CHAT2_API = CHAT2_API||{};
+    CHAT2_API.args = {mode:'widget',chat2_base_url:'//[YOUR_ADDRESS].chat2.com/',wheight:450,wwidth:350,pheight:520,pwidth:500,leaveamessage:true,check_messages:true,lang:'eng/'};
+    (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.setAttribute('crossorigin','anonymous'); po.async = true;
+        var date = new Date();po.src = '//[YOUR_ADDRESS].chat2.com/design/defaulttheme/js/widgetv2/index.js?'+(""+date.getFullYear() + date.getMonth() + date.getDate());
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+</script></textarea>
+        <div class="smtext"><span>Or install the Chat2 wordpress plugin</span> <a href="https://wordpress.org/plugins/chat2/"><img src="templates/chat2/images/wp.png" alt=""></a></div>
+    </div>
+        
+    <div class="ChooseText">
+        <h4>Click to choose</h4>
+        <div class="option diy"><span>DIY,</span> Choose the 'do it yourself' method if you are comfortable pasting code to pages on your site and have the necessary file access like ftp or a control panel.</div>
+        <div class="option job"><span>Not my job, </span> Choose this method if you want to give this task to someone else.</div>
+        <div class="option detail"><span>Do it for me,</span> Choose this method if you want us to install Chat2 for you. You will need to provide us access details or a contact who can give us the necessary access.</div>
+    </div>
+    
+     <div class="TopP">
+        <div class="manualLink"><a target="__blank" href="http://chat2.com/learn/" ></a></div>
+        <div class="centered"><a target="__blank" href="http://chat2.com/learn/" >Chat2 Manual</a></div>
+        <div style="clear:both"></div>
+    </div>
+    
+    <div class="only_all">
+            <div id="wtd">
+                <div class="PDFIcon">
+                    <div style="clear:both"></div>
+                    <div class="manualLink"><a target="__blank" href="http://chat2.com/learn/" ></a></div>
+                    <div><a target="__blank" href="http://chat2.com/learn/" >Chat2 Manual</a></div>
+                    <div style="clear:both"></div>
+                </div>
+            </div>
+    </div>
+    
+    
+</div>
+
+
+<script>
+    jQuery.fn.center = function () {
+        this.css("position", "absolute");
+        this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 3) +
+        $(window).scrollTop()) + "px");
+        this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) +
+        $(window).scrollLeft()) + "px");
+        return this;
+    };
+    $(function () {
+        $('#content').center().show();
+        $(window).on('resize', function () {
+            $('#content').center();
+        });
+        $('#send-webmaster').find('span').click(function () {
+            $('#send-webmaster').hide();
+            $('#send-form').show();
+        });
+        $('#button-cancel').click(function () {
+            $('#send-form').hide();
+            $('#send-webmaster').show();
+        });
+        $('#button-cancel_s').click(function () {
+
+            $('.detail_body').toggleClass('active');
+            $('#send-webmaster').show();
+            $('.option.detail').toggleClass('hide');
+
+        });
+        var $emailInput = $('#send-to-email');
+        var $urlInput = $('#url-to-install');
+        var inprogress = false;
+
+        $('#button-send').on('click', function () {
+            if (!inprogress) {
+                if ($emailInput.val() == '') {
+                    alert('Please enter the email address');
+                    return false;
+                }
+                if ($urlInput.val() == '') {
+                    alert('Please enter the installation url');
+                    return false;
+                }
+                inprogress = true;
+                $.post('/sendinstructions.php', {address: '[YOUR_ADDRESS]', email: $emailInput.val(), url: $urlInput.val()},
+                    function (data) {
+                        if (data.success == 'true') {
+                            $('#button-send').off('click');
+                            $('#send-form').hide();
+                            $('#send-success').show();
+                            $('.notmyjob-text').hide();
+                            $('.ChooseText').hide();
+                            $('.job_body').css({'text-align':'center'});
+                            $('.option-title.job-tit').css({'display':'inline-block'});
+                            $('.only_all').removeClass('hide');
+                        } else {
+                            inprogress = false;
+                            alert('Email wasn\'t sent. Try again.');
+                        }
+                    }, 'json');
+                }
+            inprogress = false;
+        });
+        var $textInput = $('#loginname');
+        $('#button-send_s').on('click', function () {
+
+            if (!inprogress) {
+
+                if ($textInput.val() == '') {
+                    alert('Please enter the details for installation');
+                    return false;
+                }
+                inprogress = true;
+                $.post('/senddoitforme.php', {text:$textInput.val(),address: '[YOUR_ADDRESS]', email: 'sales@chat2.com', url: '[YOUR_URL_HERE]'},
+                    function (data) {
+                        if (data.success == 'true') {
+                            $('#button-send_s').off('click');                            
+                            $('#send-form-install').hide();
+                            $('#send-success-installation').show();
+                            $('.ChooseText').hide();
+                        } else {
+                            inprogress = false;
+                            alert('Email wasn\'t sent. Try again.');
+                        }
+                }, 'json');
+                inprogress = false;
+            }
+            
+        });
+    });
+</script>
+<script>var CHAT2_API = CHAT2_API||{};CHAT2_API.args = {mode:'widget',chat2_base_url:'//w.chat2.com/',wheight:450,wwidth:350,pheight:520,pwidth:500,leaveamessage:true,theme:16,check_messages:false,lang:'eng/'};(function() {var po = document.createElement('script'); po.type = 'text/javascript'; po.setAttribute('crossorigin','anonymous'); po.async = true;var date = new Date();po.src = '//w.chat2.com/design/defaulttheme/js/widgetv2/index.js?'+(""+date.getFullYear() + date.getMonth() + date.getDate());var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);})();</script>
+</body>
+</html>
